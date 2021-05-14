@@ -10,8 +10,9 @@ passport.use(new JWTStrategy.Strategy({
 },
 async (jwtPayload, cb) => {
   try {
+    const { email } = jwtPayload;
     return cb(
-      null, { ...jwtPayload },
+      null, { email },
     );
   } catch (error) {
     return cb(error);
