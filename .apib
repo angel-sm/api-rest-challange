@@ -1,2 +1,54 @@
-# Polls
+FORMAT: 1A
 
+# nomada-challenge
+
+nomada challenge is an API REST allowing make fake login and check protected endpoints
+
+# Group Auth 
+
+## Auth login [/login]
+
+### Get JWT of login [POST]
+
++ Response 200 (application/json)
+
+        {
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRlbW9AdXN1YXJpby5jb20iLCJpYXQiOjE2MjA5NjkyMzJ9.Rg8NkF7MkZOYKCIewdjZQjvv-B7uA3R3h0Xtn9Kf7vE"
+        }
+
+# Group Protected 
+
+## Me [/me]
+
+### Get claims of JWT [GET]
+
++ Response 200 (application/json)
+
+        {
+            "email": "demo@usuario.com"
+        }
+
+## Links [/get-links]
+
+### Get links of html page [GET]
+
++ Response 200 (text/plain)
+
+        TAG VALUES	HREF VALUES
+        Imágenes 	 href="https://www.google.com.mx/imghp?hl=es-419&tab=wi" 
+        Maps 	 href="https://maps.google.com.mx/maps?hl=es-419&tab=wl" 
+        Play 	 href="https://play.google.com/?hl=es-419&tab=w8" 
+        YouTube 	 href="https://mx.youtube.com/?gl=MX&tab=w1" 
+        Noticias 	 href="https://news.google.com/?tab=wn" 
+        Gmail 	 href="https://mail.google.com/mail/?tab=wm" 
+        Drive 	 href="https://drive.google.com/?tab=wo" 
+        Historialweb 	 href="http://www.google.com.mx/history/optout?hl=es-419" 
+        Preferencias 	 href="/preferences?hl=es-419" 
+        Iniciarsesión 	 href="https://accounts.google.com/ServiceLogin?hl=es-419&passive=true&continue=https://www.google.com.mx/&ec=GAZAAQ" 
+        Búsquedaavanzada 	 href="/advanced_search?hl=es-419&amp;authuser=0" 
+        Programasdepublicidad 	 href="/intl/es-419/ads/" 
+        SolucionesEmpresariales 	 href="/services/" 
+        TodoacercadeGoogle 	 href="/intl/es-419/about.html" 
+        Google.com 	 href="https://www.google.com.mx/setprefdomain?prefdom=US&amp;sig=K_JyhMv7VRyHiqfSKqCetYIHZsau4%3D" 
+        Privacidad 	 href="/intl/es-419/policies/privacy/" 
+        Condiciones 	 href="/intl/es-419/policies/terms/" 
