@@ -56,9 +56,9 @@ export class ProtectedService implements ProtectedRepository {
         writeStream.close();
       })
       .then(() => {
-        const read = fs.createReadStream('tags.xlsx');
-        read.pipe(res);
-        read.on('error', (err) => res.status(500).json({ error: 'Error al leer el archivo' }));
+        const readStream = fs.createReadStream('tags.xlsx');
+        readStream.pipe(res);
+        readStream.on('error', (err) => res.status(500).json({ error: 'Error al leer el archivo' }));
       })
       .catch((error) => res.status(500).json({ error: 'Error en el servicio de generar archivo' }));
   }
