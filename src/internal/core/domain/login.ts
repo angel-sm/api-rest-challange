@@ -1,7 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 import Joi from '@hapi/joi';
 
-export const SignInSchema = {
+export const LoginSchema = {
   email: Joi
     .string()
     .required(),

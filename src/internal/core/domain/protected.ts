@@ -2,7 +2,7 @@
 import Joi from '@hapi/joi';
 
 export const ProtectedSchema = {
-  link: Joi
+  url: Joi
     .string()
     .required(),
 };
