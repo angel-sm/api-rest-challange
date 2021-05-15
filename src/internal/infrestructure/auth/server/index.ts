@@ -4,17 +4,17 @@
 import { Application, Request, Response } from 'express';
 import { AuthService } from '../../../core/services/auth/service';
 import { validatorSchemaHandler } from '../../../../utils/validators/validatorSchema';
-import { SignInSchema } from '../../../core/domain/singIn';
+import { LoginSchema } from '../../../core/domain/login';
 
 export const AuthServer = (app: Application, router: any) => {
   const service = new AuthService();
 
   app.use('/', router);
 
-  router.post('/login', validatorSchemaHandler(SignInSchema), (req: Request, res: Response) => {
+  router.post('/login', validatorSchemaHandler(LoginSchema), (req: Request, res: Response) => {
     const { email, password } = req.body;
 
-    service.SignIn(email, password)
+    service.Login(email, password)
       .then((token: string) => {
         res.status(200).json({ token });
       })

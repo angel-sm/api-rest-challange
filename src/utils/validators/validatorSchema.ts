@@ -14,6 +14,6 @@ function validateSchema(data: any, schema: Schema) {
 export function validatorSchemaHandler(schema: any) {
   return (req: Request, res: Response, next: NextFunction) => {
     const error = validateSchema(req.body, schema);
-    error ? next(error.message) : next();
+    error ? res.status(400).json({ error: error.message }) : next();
   };
 }

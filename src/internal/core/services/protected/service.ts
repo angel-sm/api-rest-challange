@@ -60,6 +60,6 @@ export class ProtectedService implements ProtectedRepository {
         readStream.pipe(res);
         readStream.on('error', (err) => res.status(500).json({ error: 'Error al leer el archivo' }));
       })
-      .catch((error) => res.status(500).json({ error: 'Error en el servicio de generar archivo' }));
+      .catch((error) => res.status(400).json({ error: 'Error en el servicio de generar archivo' }));
   }
 }
