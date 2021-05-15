@@ -6,8 +6,8 @@ Challenge to build an API REST with some routes protectes and simulated login
 Make sure you have [Node.js](http://nodejs.org/) installed.
 
 ```sh
-git clone https://github.com/angel-sm/nomada-challenge.git
-cd nomada-challenge
+git clone https://github.com/angel-sm/api-rest-challange
+cd api-rest-challange
 npm install
 ```
 
