@@ -8,7 +8,11 @@ nomada challenge is an API REST allowing make fake login and check protected end
 
 ## Auth login [/login]
 
-### Get JWT of login [POST]
++ Parameters
+    + email: demo@usuario.com (required)
+    + password: pipjY7-guknaq-nancex (required)
+
+### Login [POST]
 
 + Response 200 (application/json)
 
@@ -20,6 +24,9 @@ nomada challenge is an API REST allowing make fake login and check protected end
 
 ## Me [/me]
 
++ Headers
+        Authorization: Bearer token
+
 ### Get claims of JWT [GET]
 
 + Response 200 (application/json)
@@ -29,6 +36,12 @@ nomada challenge is an API REST allowing make fake login and check protected end
         }
 
 ## Links [/get-links]
+
++ Headers
+        Authorization: Bearer token
+
++ Parameters
+    + url: "http://example-of-url-page.com (required) - url of someone page
 
 ### Get links of html page [GET]
 
