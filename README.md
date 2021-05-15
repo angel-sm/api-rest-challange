@@ -1,4 +1,4 @@
-# nomada-challenge
+# api-rest-challange
 Challenge to build an API REST with some routes protectes and simulated login
 
 ## Install Locally
