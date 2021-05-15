@@ -17,6 +17,14 @@ Remove .example to file .env.example to use environment variables
 
 ## Run Proyect Locally
 
+run proyect with next command
+```sh
+npm start
+```
+Your app should now be running on [localhost:3000](http://localhost:3000/).
+
+## Run Test
+
 run all test with next command
 ```sh
 npm run test
@@ -32,11 +40,3 @@ run test of protected entitie with next command
 npm run test -- protected
 ```
 
-## Run Test
-
-run proyect with next command
-```sh
-npm run test
-```
-
-Your app should now be running on [localhost:3000](http://localhost:3000/).
